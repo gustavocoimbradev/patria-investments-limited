@@ -4,7 +4,8 @@
   "description": "Static template for Patria Investiments Limited (PAX)",
   "main": "index.html",
   "scripts": {
-    "start": "npm instal && npx http-server -p 3000 -a localhost"
+    "start": "npm instal && npx http-server -p 3000 -a localhost",
+    "publish": "git add . && git pull && git commit -m 'patria-investments-limited' && git push"
   },
   "author": {
     "name": "Gustavo Coimbra",
