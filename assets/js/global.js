@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ---------------- Header Mobile ---------------- */
 
     (function header_mobile() {
-        const body = document.querySelector('body');
+        const html = document.querySelector('html');
         const navigation = document.querySelector('.js-navigation-mobile');
         const header = document.querySelector('.js-header-mobile');
         document.querySelector('.js-toggle-navigation-mobile')?.addEventListener('click', () => {
-            body.classList.toggle('is-scrollable');
+            html.classList.toggle('overflow-none');
             navigation.classList.toggle('is-active');
             header.classList.toggle('is-active');
         });
