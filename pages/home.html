@@ -154,11 +154,73 @@
     <!------------------ Main Content ------------------>
 
     <main class="main">
+
+        <!------------------ Banner ------------------>
         <section class="s-banner" data-animation="fade-in">
             <figure data-animation="zoom-out">
                 <img src="../../assets/img/banner-1.png" alt="Banner" width="1440" height="447">
             </figure>
+            <nav class="bar" data-animation="fade-in">
+                <div class="container">
+                    <ul data-animation="fade-up">
+                        <li>
+                            <a href="#" target="_self">The Firm</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">Our Business</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">Shareholders</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">Media</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </section>
+
+        <!------------------ Stock ------------------>
+        <section class="s-stock">
+            <div class="container">
+                <div class="s-stock__text" data-animation="fade-right">
+                    <h1>Patria Investments</h1>
+                    <p>Patria is a global alternative asset manager and industry leader in Latin America. Founded over
+                        35 years ago, Patria has total assets under management of $44.7 billion, and offices in 13
+                        cities on 4 continents. Patria aims to generate attractive long-term investment returns and,
+                        through a diversified platform with strategies that include Private Equity, Infrastructure,
+                        Credit, Real Estate, Public Equities and Global Private Markets Solutions, serve as the gateway
+                        to alternative investments for both local investors in Latin America, as well as global
+                        investors.</p>
+                </div>
+                <div class="s-stock__chart" data-animation="fade-left">
+                    <header>
+                        <div>
+                            <p class="title">Stock Information</p>
+                            <small class="delay">Minimum 15 minutes delayed. Source:</small>
+                            <figure class="image">
+                                <img src="../assets/img/lseg.png" alt="LSEG" width="97.6" height="46">
+                            </figure>
+                        </div>
+                        <div>
+                            <small class="ticker">NASDAQ GS: PAX</small>
+                            <div class="price">
+                                <h2 class="value">$ 11,85</h2>
+                                <p class="variation up">0(000%)</p>
+                            </div>
+                        </div>
+                    </header>
+                    <div id="stockchart"></div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!------------------ Footer Desktop & Mobile ------------------>
@@ -238,7 +300,11 @@
         </div>
     </footer>
 
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+
     <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/pages/home.js"></script>
 
 </body>
 

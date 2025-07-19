@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.querySelectorAll('li').forEach(li => {
             const submenu = li.querySelector('ul');
             const link = li.querySelector('a');
-        
+
             if (submenu && link) {
                 link.addEventListener('click', e => {
                     e.preventDefault();
@@ -85,5 +85,83 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     })();
+
+    /* ---------------- Highcharts ---------------- */
+    
+    (function highcharts() {
+
+        function parseDate(str) {
+            const [date, time] = str.split(' ');
+            const [y, m, d] = date.split('-').map(Number);
+            const [h, i] = time.split(':').map(Number);
+            return Date.UTC(y, m - 1, d, h, i);
+        }
+
+        window.generate_chart = function (id, rawData, options = {}) {
+            const data = rawData.map(([time, value]) => [parseDate(time), value]);
+
+            const defaultOptions = {
+                credits: { enabled: false },
+                chart: { height: 300 },
+                title: { text: null },
+                rangeSelector: { enabled: false },
+                navigator: { enabled: false },
+                scrollbar: { enabled: false },
+                yAxis: {
+                    opposite: true,
+                    gridLineColor: '#2C2C2C',
+                    labels: { align: 'left', x: 0 },
+                    title: { text: null },
+                    endOnTick: false
+                },
+                xAxis: {
+                    type: 'datetime',
+                    labels: {
+                        formatter: function () {
+                            const date = new Date(this.value);
+                            let hours = date.getHours();
+                            const ampm = hours >= 12 ? 'PM' : 'AM';
+                            hours = hours % 12;
+                            hours = hours || 12;
+                            return hours + ampm;
+                        },
+                        style: {
+                            fontSize: '11px',
+                            color: '#444',
+                            fontFamily: 'sans-serif'
+                        }
+                    },
+                    tickInterval: 3600 * 1000
+                },
+                legend: {
+                    enabled: false,
+                    align: 'right',
+                    verticalAlign: 'top',
+                    floating: true,
+                    layout: 'vertical',
+                    labelFormatter: () => 'USD'
+                },
+                tooltip: {
+                    xDateFormat: '%H:%M',
+                    shared: true,
+                    valueDecimals: 2,
+                    valuePrefix: '$'
+                },
+                series: [{
+                    name: 'USD',
+                    type: 'line',
+                    data: data,
+                    color: '#5B6BB9',
+                    lineWidth: 1,
+                    marker: { enabled: false }
+                }]
+            };
+
+            const finalOptions = Object.assign({}, defaultOptions, options);
+            Highcharts.stockChart(id, finalOptions);
+        };
+
+    })();
+
 
 });

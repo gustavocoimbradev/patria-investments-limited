@@ -1,0 +1,28 @@
+h1 {
+    font-size: var(--xlFontsize);
+    margin-bottom: 16px;
+    line-height: 48px;
+}
+
+h2 {
+    font-size: var(--lgFontsize);
+    margin-bottom: 16px;
+    line-height: 48px;
+}
+
+h3, h4, h5, h6 {
+    font-size: var(--mdFontsize);
+    margin-bottom: 16px;
+    line-height: 48px;
+}
+
+p {
+    font-size: var(--smFontsize);
+    margin-bottom: 16px;
+    line-height: 140%;
+}
+small {
+    font-size: var(--xsFontsize);
+    margin: 0;
+    line-height: 100%;
+}

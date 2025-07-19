@@ -9,12 +9,11 @@
     0% {
         transform: translateY(70px);
         opacity: 0;
-        pointer-events: none;
     }
     100% {
         transform: translateY(0);
         opacity: 1;
-        pointer-events: unset;
+        
     }
 }
 
@@ -33,7 +32,7 @@
     100% {
         transform: translate(0);
         opacity: 1;
-        pointer-events: unset;
+        
     }
 }
 
@@ -51,7 +50,7 @@
     100% {
         transform: translateY(0);
         opacity: 1;
-        pointer-events: unset;
+        
     }
 }
 
@@ -70,7 +69,7 @@
     100% {
         transform: translate(0);
         opacity: 1;
-        pointer-events: unset;
+        
     }
 }
 
@@ -83,11 +82,9 @@
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        pointer-events: none;
     }
     100% {
         opacity: 1;
-        pointer-events: unset;
     }
 }
 

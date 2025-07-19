@@ -4,11 +4,13 @@
 @import url("base/fonts.css");
 @import url("base/reset.css");
 @import url("base/animations.css");
+@import url("base/typograph.css");
 
 /* Components */
 
 @import url("components/container.css");
 @import url("components/button.css");
+@import url("components/bar.css");
 
 /* Template */
 

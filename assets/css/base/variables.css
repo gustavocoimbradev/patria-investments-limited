@@ -5,17 +5,21 @@
     --blackColor: #000;
     --darkGrayColor: #2C2C2C;
     --grayColor: #6F7779;
+    --lightGrayColor: #F7F7F7;
     --primaryColor: #0D0D38;
     --secondaryColor: #2044DC;
+    --tertiaryColor: #001EAF;
+    --successColor: #228E45;
+    --errorColor: #8e2222;
 }
 
 /* ---------------- Fonts ---------------- */
 
 :root {
-    --xsFontsize: 14px;
-    --smFontsize: 16px;
-    --mdFontsize: 18px;
-    --lgFontsize: 24px;
-    --xlFontsize: 32px;
+    --xxsFontsize: 0.75rem;     /* 12px */
+    --xsFontsize: 0.875rem;     /* 14px */
+    --smFontsize: 1rem;         /* 16px */
+    --mdFontsize: 1.125rem;     /* 18px */
+    --lgFontsize: 1.5rem;       /* 24px */
+    --xlFontsize: 2rem;         /* 32px */
 }
-
