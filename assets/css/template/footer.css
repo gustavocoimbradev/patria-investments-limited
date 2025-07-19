@@ -116,6 +116,13 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 1199px) {
+        border-top: none;
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
     >p {
         color: var(--darkGrayColor);
         font-size: var(--smFontsize);
@@ -136,6 +143,10 @@
         display: flex;
         align-items: center;
         gap: 32px;
+
+        @media (max-width: 1199px) {
+            flex-direction: column;
+        }
 
         >li {
             >a {
