@@ -12,14 +12,16 @@ html {
 	-moz-tab-size: 4;
 	tab-size: 4;
 	font-family: "TG Haido Grotesk Variable", sans-serif;
+	&.overflow-hidden {
+		&, body {
+			overflow: hidden;
+		}
+	}
 }
 
 body {
 	margin: 0;
 	line-height: inherit;
-	&:not(.is-scrollable) {
-		overflow-y: hidden;
-	}
 }
 
 hr {

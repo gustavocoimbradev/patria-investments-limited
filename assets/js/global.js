@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const navigation = document.querySelector('.js-navigation-mobile');
         const header = document.querySelector('.js-header-mobile');
         document.querySelector('.js-toggle-navigation-mobile')?.addEventListener('click', () => {
-            html.classList.toggle('overflow-none');
+            html.classList.toggle('overflow-hidden');
             navigation.classList.toggle('is-active');
             header.classList.toggle('is-active');
         });
