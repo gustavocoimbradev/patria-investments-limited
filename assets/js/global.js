@@ -72,6 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('load', handleScroll);
         window.addEventListener('resize', handleScroll);
+        const menu = document.querySelector('.js-menu-mobile');
+        menu.querySelectorAll('li').forEach(li => {
+            const submenu = li.querySelector('ul');
+            const link = li.querySelector('a');
+        
+            if (submenu && link) {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    li.classList.toggle('is-active');
+                });
+            }
+        });
     })();
 
 });

@@ -221,9 +221,6 @@
                 line-height: 24px;
                 display: block;
                 padding: 8px 0;
-                &:hover {
-                    color: var(--secondaryColor);
-                }
             }
 
             &:has(>ul) {
@@ -256,8 +253,9 @@
                     }
                 }
 
-                &:hover {
+                &.is-active {
                     >a {
+                        color: var(--secondaryColor);
                         &::after {
                             content: url('data:image/svg+xml,<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 4.20001L9.95998 10.84C9.43998 11.36 8.59998 11.36 8.07998 10.84L1.39998 4.20001" stroke="%23001EAF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
                         }
