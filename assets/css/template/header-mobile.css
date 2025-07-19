@@ -1,0 +1,272 @@
+/* ---------------- Base ---------------- */
+
+.header--mobile {
+    padding: 26px 0;
+    position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 9999;
+
+    @media (max-width: 1199px) {
+        display: block;
+    }
+
+    >.container {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        position: relative;
+    }
+
+    &,
+    * {
+        transition: all .3s ease-in-out;
+    }
+
+    &.is-active, &.is-scrolled {
+        .header--mobile__brand>span {
+            color: var(--primaryColor);
+        } 
+        .header--mobile__brand>a>img:nth-of-type(2),
+        .header--mobile__toggle>button>img:nth-of-type(2) {
+            opacity: 1;
+        }
+    }
+
+    &.is-scrolled {
+        background: var(--whiteColor);
+    }
+    
+}
+
+/* ---------------- Brand ---------------- */
+
+.header--mobile__brand {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    z-index: 100;
+
+    >a {
+        position: relative;
+
+        >img {
+            min-width: 110px;
+            max-width: 110px;
+            width: 110px;
+            height: 22px;
+            min-height: 22px;
+            max-height: 22px;
+
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+
+    >span {
+        color: var(--whiteColor);
+        font-size: var(--xsFontsize);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        width: 148px;
+    }
+}
+
+/* ---------------- Toggle ---------------- */
+
+.header--mobile__toggle {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    z-index: 100;
+    position: relative;
+
+    >button {
+        position: relative;
+
+        >img {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            min-height: 32px;
+
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+/* ---------------- Navigation ---------------- */
+
+.header--mobile__navigation {
+    position: fixed;
+    top: 0;
+    left: 100dvw;
+    width: 100dvw;
+    height: 100dvh;
+    overflow-y: auto;
+    background: var(--whiteColor);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 24px 0;
+    gap: 24px;
+
+    &::after {
+        content: '';
+        background: var(--whiteColor);
+        position: fixed;
+        top: 0;
+        left: 100dvw;
+        width: 100%;
+        height: 86px;
+        z-index: 10;
+        transition: all .3s ease-in-out;
+    }
+
+    &.is-active {
+        left: 0;
+        opacity: 1;
+        pointer-events: unset;
+        &::after {
+            left: 0;
+        }
+    }
+}
+
+/* ---------------- Search ---------------- */
+
+.header--mobile__search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+
+    >label {
+        color: var(--primaryColor);
+        text-align: center;
+        font-size: var(--xlFontsize);
+        font-style: normal;
+        font-weight: 344;
+        line-height: 48px;
+    }
+
+    >div {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        width: 100%;
+
+        >button {
+            >img {
+                min-width: 32px;
+                max-width: 32px;
+                min-height: 32px;
+                max-height: 32px;
+            }
+        }
+
+
+        >input {
+            flex: 1;
+            border: solid 1px var(--primaryColor);
+            padding: 16px;
+            outline: none;
+
+            &::placeholder {
+                color: var(--darkGrayColor);
+                font-size: var(--smFontsize);
+                font-style: normal;
+                font-weight: 231;
+                line-height: 24px;
+            }
+        }
+    }
+
+}
+
+/* ---------------- Menu ---------------- */
+
+.header--mobile__menu {
+    width: 100%;
+
+    >ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        >li {
+
+            >a {
+                color: var(--blackColor);
+                font-size: var(--smFontsize);
+                font-style: normal;
+                font-weight: 344;
+                line-height: 24px;
+                display: block;
+                padding: 8px 0;
+                &:hover {
+                    color: var(--secondaryColor);
+                }
+            }
+
+            &:has(>ul) {
+                >a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+
+                    &::after {
+                        content: url('data:image/svg+xml,<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 4.20001L9.95998 10.84C9.43998 11.36 8.59998 11.36 8.07998 10.84L1.39998 4.20001" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                    }
+                }
+
+                >ul {
+                    display: none;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 24px;
+                    padding: 8px 0;
+
+                    >li {
+                        >a {
+                            color: var(--grayColor);
+                            font-size: var(--smFontsize);
+                            font-style: normal;
+                            font-weight: 344;
+                            line-height: 24px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    >a {
+                        &::after {
+                            content: url('data:image/svg+xml,<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 4.20001L9.95998 10.84C9.43998 11.36 8.59998 11.36 8.07998 10.84L1.39998 4.20001" stroke="%23001EAF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                        }
+                    }
+                    >ul {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

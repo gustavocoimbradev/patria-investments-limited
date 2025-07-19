@@ -1,0 +1,18 @@
+/* Base */
+
+@import url("base/variables.css");
+@import url("base/fonts.css");
+@import url("base/reset.css");
+@import url("base/animations.css");
+
+/* Components */
+
+@import url("components/container.css");
+@import url("components/button.css");
+
+/* Template */
+
+@import url("template/header-desktop.css");
+@import url("template/header-mobile.css");
+@import url("template/footer.css");
+

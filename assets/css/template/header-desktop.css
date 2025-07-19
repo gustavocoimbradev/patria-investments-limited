@@ -1,0 +1,270 @@
+/* ---------------- Base ---------------- */
+
+.header--desktop {
+    padding: 26px 0;
+    position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 9999;
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
+
+    >.container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        position: relative;
+    }
+
+    &,
+    * {
+        transition: all .3s ease-in-out;
+    }
+
+    &.is-active, &.is-scrolled {
+        .header--desktop__brand>span,
+        .header--desktop__navigation * {
+            color: var(--primaryColor);
+        } 
+
+        .header--desktop__brand>a>img:nth-of-type(2),
+        .header--desktop__right>button>img:nth-of-type(2) {
+            opacity: 1;
+        }
+
+    }
+
+    &.is-scrolled {
+        background: var(--whiteColor);
+    }
+
+}
+
+/* ---------------- Brand ---------------- */
+
+.header--desktop__brand {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    z-index: 100;
+
+    >a {
+        position: relative;
+
+        >img {
+            min-width: 110px;
+            max-width: 110px;
+            width: 110px;
+            height: 22px;
+            min-height: 22px;
+            max-height: 22px;
+
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+
+    >span {
+        color: var(--whiteColor);
+        font-size: var(--xsFontsize);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        width: 148px;
+    }
+}
+
+/* ---------------- Navigation ---------------- */
+
+.header--desktop__navigation {
+    margin-left: auto;
+    position: relative;
+    z-index: 100;
+
+    >ul {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+
+        >li {
+            position: relative;
+
+            >a {
+                color: var(--whiteColor);
+                leading-trim: both;
+                text-edge: cap;
+                font-size: var(--xsFontsize);
+                font-style: normal;
+                font-weight: 625;
+                line-height: 24px;
+                display: block;
+                padding: 14px 0;
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            >ul {
+                position: absolute;
+                width: max-content;
+                top: calc(100% + 50px);
+                opacity: 0;
+                pointer-events: none;
+                transition: all .3s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                padding: 16px 0;
+                background: var(--whiteColor);
+                border-radius: 4px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    bottom: 100%;
+                    height: 26px;
+                }
+
+                >li {
+                    >a {
+                        display: block;
+                        text-align: center;
+                        padding: 8px 13.5px;
+                        color: var(--primaryColor);
+                        font-weight: 300;
+                        transition: all .3s ease-in-out;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            background: rgba(13, 13, 56, 0.05);
+                        }
+                    }
+
+                }
+            }
+
+            &:hover {
+                >ul {
+                    opacity: 1;
+                    pointer-events: unset;
+                    top: calc(100% + 26px);
+                }
+            }
+        }
+    }
+}
+
+/* ---------------- Right ---------------- */
+
+.header--desktop__right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 100;
+
+    >button {
+        position: relative;
+
+        >img {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            min-height: 32px;
+
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+/* ---------------- Search ---------------- */
+
+.header--desktop__search {
+    position: fixed;
+    width: 100%;
+    height: 535px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--whiteColor);
+    top: -100dvh;
+    padding-top: 140px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .7s ease-in-out;
+    z-index: 99;
+    background: var(--whiteColor);
+    box-shadow: 0px 619px 173px 0px rgba(0, 0, 0, 0.00), 0px 396px 158px 0px rgba(0, 0, 0, 0.01), 0px 223px 134px 0px rgba(0, 0, 0, 0.05), 0px 99px 99px 0px rgba(0, 0, 0, 0.09), 0px 25px 54px 0px rgba(0, 0, 0, 0.10);
+
+    &.is-active {
+        opacity: 1;
+        top: 0;
+        pointer-events: unset;
+    }
+
+    >.container {
+        height: 100%;
+
+        >div {
+            gap: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 100%;
+
+            >button {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+
+                >label {
+                    color: var(--primaryColor);
+                    font-size: var(--xlFontsize);
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 100%;
+                    margin-bottom: 0;
+                }
+
+                >input {
+                    padding: 16px;
+                    border: solid 1px var(--primaryColor);
+                    width: 579px;
+                    max-width: calc(100% - 30px);
+                    outline: none;
+
+                    &::placeholder {
+                        color: var(--darkGrayColor);
+                        font-size: var(--smFontsize);
+                        font-style: normal;
+                        font-weight: 231;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

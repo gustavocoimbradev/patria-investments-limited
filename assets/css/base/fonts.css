@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TG Haido Grotesk';
+    src: local('TG Haido Grotesk Variable'), local('TG-Haido-Grotesk-Variable'),
+        url('../../fonts/TGHaidoGroteskVariable.woff2') format('woff2'),
+        url('../../fonts/TGHaidoGroteskVariable.woff') format('woff'),
+        url('../../fonts/TGHaidoGroteskVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

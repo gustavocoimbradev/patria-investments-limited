@@ -1,0 +1,118 @@
+[data-animation]:not(.is-visible) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ---------------- Fade up ---------------- */
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+[data-animation='fade-up'].is-visible {
+    animation: fadeUp 1s forwards ease-in-out;
+}
+
+/* ---------------- Fade right ---------------- */
+
+@keyframes fadeRight {
+    0% {
+        transform: translateX(-70px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+[data-animation='fade-right'].is-visible {
+    animation: fadeRight 1s forwards ease-in-out;
+}
+/* ---------------- Fade down ---------------- */
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-70px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+[data-animation='fade-down'].is-visible {
+    animation: fadeDown 1s forwards ease-in-out;
+}
+
+/* ---------------- Fade left ---------------- */
+
+@keyframes fadeLeft {
+    0% {
+        transform: translateX(70px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+[data-animation='fade-left'].is-visible {
+    animation: fadeLeft 1s forwards ease-in-out;
+}
+
+/* ---------------- Fade in ---------------- */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+[data-animation='fade-in'].is-visible {
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* ---------------- Zoom out (only for figures with img inside it) ---------------- */
+
+@keyframes zoomOut {
+    0% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+[data-animation='zoom-out'].is-visible {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        animation: zoomOut 15s forwards ease;
+    }
+}
+

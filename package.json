@@ -1,0 +1,17 @@
+{
+  "name": "patria-investments-limited-pax",
+  "version": "1.0.0",
+  "description": "Static template for Patria Investiments Limited (PAX)",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm instal && npx http-server -p 3000 -a localhost"
+  },
+  "author": {
+    "name": "Gustavo Coimbra",
+    "url": "https://github.com/gustavocoimbradev"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

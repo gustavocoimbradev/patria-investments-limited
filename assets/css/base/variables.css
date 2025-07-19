@@ -1,0 +1,21 @@
+/* ---------------- Colors ---------------- */
+
+:root {
+    --whiteColor: #FFF;
+    --blackColor: #000;
+    --darkGrayColor: #2C2C2C;
+    --grayColor: #6F7779;
+    --primaryColor: #0D0D38;
+    --secondaryColor: #2044DC;
+}
+
+/* ---------------- Fonts ---------------- */
+
+:root {
+    --xsFontsize: 14px;
+    --smFontsize: 16px;
+    --mdFontsize: 18px;
+    --lgFontsize: 24px;
+    --xlFontsize: 32px;
+}
+
