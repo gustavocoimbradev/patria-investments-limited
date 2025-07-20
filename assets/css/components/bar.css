@@ -8,19 +8,55 @@
     bottom: 0;
     width: 100%;
     z-index: 1000;
+
     >.container {
+
+        @media (max-width: 1199px) {
+            display: flex;
+            align-items: center;
+        }
+
+        >button {
+            display: none;
+            @media (max-width: 1199px) {
+                display: flex;
+            }
+        }
         >ul {
             display: flex;
             align-items: center;
             gap: 16px;
             justify-content: space-between;
+
+            @media (max-width: 1199px) {
+                flex: 1;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                }
+            }
+
             >li {
+
+                @media (max-width: 1199px) {
+                    flex: 0 0 100%;
+                    scroll-snap-align: center;
+                    display: flex;
+                    justify-content: center;
+                }
+
                 >a {
                     color: var(--whiteColor);
                     text-transform: uppercase;
                     display: block;
                     padding: 18px 0;
                     font-size: var(--xsFontsize);
+
                     &:hover {
                         text-decoration: underline;
                     }

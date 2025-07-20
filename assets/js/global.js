@@ -86,6 +86,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })();
 
+    /* ---------------- Banner bar ---------------- */
+
+    (function banner_bar() {
+        const bannerBar = document.querySelector('.js-banner-bar');
+        const prevButton = document.querySelector('.js-banner-bar-prev');
+        const nextButton = document.querySelector('.js-banner-bar-next');
+        const items = bannerBar.querySelectorAll('li');
+        let currentIndex = 0;
+    
+        const scrollToIndex = (index) => {
+            items[index]?.scrollIntoView({
+                behavior: 'smooth',
+                inline: 'center',
+                block: 'nearest' 
+            });
+        };
+    
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) currentIndex--;
+            scrollToIndex(currentIndex);
+        });
+    
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < items.length - 1) currentIndex++;
+            scrollToIndex(currentIndex);
+        });
+    })();
+    
+    
     /* ---------------- Highcharts ---------------- */
     
     (function highcharts() {

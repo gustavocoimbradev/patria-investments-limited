@@ -62,7 +62,7 @@
                     <img class="light" src="../assets/img/search-light.svg" alt="Search" width="32" height="32">
                     <img class="dark" src="../assets/img/search-dark.svg" alt="Search" width="32" height="32">
                 </button>
-                <a href="#" target="_self" class="button">Login</a>
+                <a href="#" target="_self" class="button button--primary">Login</a>
             </div>
             <form class="header--desktop__search js-search-desktop" action="/" method="GET">
                 <div class="container">
@@ -75,7 +75,7 @@
                             <input type="text" placeholder="Search">
                         </div>
                         <div>
-                            <button class="button">Search</button>
+                            <button class="button button--primary">Search</button>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                 </button>
             </div>
             <div class="header--mobile__navigation js-navigation-mobile">
-                <a href="#" target="_self" class="button">Login</a>
+                <a href="#" target="_self" class="button button--primary">Login</a>
                 <form class="header--mobile__search" action="/" method="GET">
                     <label for="search">What are do you looking for?</label>
                     <div>
@@ -160,8 +160,13 @@
             <figure data-animation="zoom-out">
                 <img src="../../assets/img/banner-1.png" alt="Banner" width="1440" height="447">
             </figure>
-            <nav class="bar" data-animation="fade-in">
+            <nav class="bar js-banner-bar" data-animation="fade-in">
                 <div class="container">
+                    <button class="js-banner-bar-prev">
+                        <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4484 1.00006L2 9.26006L10.4484 17" stroke="white" stroke-width="2.41382" />
+                        </svg>
+                    </button>
                     <ul data-animation="fade-up">
                         <li>
                             <a href="#" target="_self">The Firm</a>
@@ -182,6 +187,11 @@
                             <a href="#" target="_self">Contact</a>
                         </li>
                     </ul>
+                    <button class="js-banner-bar-next">
+                        <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.55164 17L10 8.74L1.55164 1.00006" stroke="white" stroke-width="2.41382" />
+                        </svg>
+                    </button>
                 </div>
             </nav>
         </section>
@@ -189,7 +199,7 @@
         <!------------------ Stock ------------------>
         <section class="s-stock">
             <div class="container">
-                <div class="s-stock__text" data-animation="fade-right">
+                <aside class="s-stock__text" data-animation="fade-right">
                     <h1>Patria Investments</h1>
                     <p>Patria is a global alternative asset manager and industry leader in Latin America. Founded over
                         35 years ago, Patria has total assets under management of $44.7 billion, and offices in 13
@@ -198,7 +208,7 @@
                         Credit, Real Estate, Public Equities and Global Private Markets Solutions, serve as the gateway
                         to alternative investments for both local investors in Latin America, as well as global
                         investors.</p>
-                </div>
+                </aside>
                 <div class="s-stock__chart" data-animation="fade-left">
                     <header>
                         <div>
@@ -216,8 +226,50 @@
                             </div>
                         </div>
                     </header>
-                    <div id="stockchart"></div>
+                    <main>
+                        <div class="currency">
+                            <span>USD</span>
+                        </div>
+                        <div id="stockchart"></div>
+                    </main>
                 </div>
+            </div>
+        </section>
+
+        <!------------------ Press Releases ------------------>
+        <section class="s-press-releases">
+            <div class="container">
+                <header class="s-press-releases__title">
+                    <h1>Press Releases</h1>
+                </header>
+                <main class="s-press-releases__items">
+                    <article class="s-press-releases__items__item">
+                        <time>Nov 05, 2024</time>
+                        <strong>Patria Reports Third Quarter 2024 Earnings Results</strong>
+                        <p>GRAND CAYMAN, Cayman Islands, Nov. 05, 2024 (GLOBE NEWSWIRE) -- Patria (Nasdaq:PAX) reported
+                            today its unaudited results for the third quarter ended September 30, 2024. The full
+                            detailed presentation of Patria's third quarter 2024 results can be accessed on the
+                            Shareholders section of Patria’s ...</p>
+                    </article>
+                    <article class="s-press-releases__items__item">
+                        <time>Oct 10, 2024</time>
+                        <strong>Patria Announces Third Quarter 2024 Investor Call</strong>
+                        <p>GRAND CAYMAN, Cayman Islands, Oct. 10, 2024 (GLOBE NEWSWIRE) -- Patria (Nasdaq:PAX) announced
+                            today that it will release financial results for the third quarter 2024 on Tuesday, November
+                            5, 2024, and host a conference call via public webcast at 9:00 a.m. ET. ...</p>
+                    </article>
+                    <article class="s-press-releases__items__item">
+                        <time>Aug 01, 2024</time>
+                        <strong>Patria Reports Second Quarter 2024 Earnings Results</strong>
+                        <p>GRAND CAYMAN, Cayman Islands, Aug. 01, 2024 (GLOBE NEWSWIRE) -- Patria (Nasdaq:PAX) reported
+                            today its unaudited results for the second quarter ended June 30, 2024. The full detailed
+                            presentation of Patria's second quarter 2024 results can be accessed on the Shareholders
+                            section of Patria’s ...</p>
+                    </article>
+                </main>
+                <footer class="s-press-releases__button">
+                    <a href="#" target="_self" class="button button--secondary">View All</a>
+                </footer>
             </div>
         </section>
 

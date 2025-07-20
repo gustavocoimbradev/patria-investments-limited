@@ -117,4 +117,70 @@
 
 
     }
+
+    >main { 
+        margin-top: 21px;
+        .currency {
+            color: var(--darkGrayColor);
+            text-align: center;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 344;
+            line-height: 100%;
+            border: solid 1px var(--darkGrayColor);
+            border-radius: 4px;
+            padding: 2px 5px;
+            width: max-content;
+            margin: 0 0 0 auto;
+            >span {
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+}
+
+/* ---------------- Press Releases ---------------- */
+
+.s-press-releases__title {
+    margin: 0 0 14px;
+
+    h1 {
+        margin: 0;
+        line-height: 100%;
+    }
+}
+
+.s-press-releases__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.s-press-releases__items__item {
+    display: flex;
+    flex-direction: column;
+
+    time,
+    p {
+        color: var(--darkGrayColor);
+        font-size: var(--smFontsize);
+        font-style: normal;
+        font-weight: 344;
+        line-height: 24px;
+        margin: 0;
+    }
+
+    strong {
+        color: var(--tertiaryColor);
+        font-size: var(--smFontsize);
+        font-style: normal;
+        font-weight: 344;
+        line-height: 24px;
+        margin: 0;
+    }
+}
+
+.s-press-releases__button {
+    margin-top: 71px;
 }
