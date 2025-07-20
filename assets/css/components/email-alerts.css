@@ -1,6 +1,6 @@
-/* ---------------- Mailing ---------------- */
+/* ---------------- E-mail Alerts ---------------- */
 
-.mailing {
+.email-alerts {
     >.container {
         >div {
             border-radius: 10px;
