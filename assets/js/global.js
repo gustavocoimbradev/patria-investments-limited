@@ -92,27 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const bannerBar = document.querySelector('.js-banner-bar');
         const prevButton = document.querySelector('.js-banner-bar-prev');
         const nextButton = document.querySelector('.js-banner-bar-next');
-        const items = bannerBar.querySelectorAll('li');
+        const items = bannerBar?.querySelectorAll('li') || [];
         let currentIndex = 0;
-
-        const scrollToIndex = (index) => {
-            items[index]?.scrollIntoView({
-                behavior: 'smooth',
-                inline: 'center',
-                block: 'nearest'
-            });
+      
+        const scrollToIndex = index => {
+          items[index]?.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest'
+          });
         };
-
-        prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) currentIndex--;
-            scrollToIndex(currentIndex);
+      
+        prevButton?.addEventListener('click', () => {
+          if (currentIndex > 0) currentIndex--;
+          scrollToIndex(currentIndex);
         });
-
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < items.length - 1) currentIndex++;
-            scrollToIndex(currentIndex);
+      
+        nextButton?.addEventListener('click', () => {
+          if (currentIndex < items.length - 1) currentIndex++;
+          scrollToIndex(currentIndex);
         });
-    })();
+      })();
 
 
     /* ---------------- Highcharts ---------------- */
@@ -205,5 +205,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     })();
+
+    /* ---------------- Select Multiple ---------------- */
+
+    window.onmousedown = function(e) {
+        var el = e.target;
+        if (el.tagName.toLowerCase() == 'option' && el.parentNode.hasAttribute('multiple')) {
+            e.preventDefault();
+            if (el.hasAttribute('selected'))
+                el.removeAttribute('selected');
+            else
+                el.setAttribute('selected', '');
+            var select = el.parentNode.cloneNode(true);
+            el.parentNode.parentNode.replaceChild(select, el.parentNode);
+        }
+    }
 
 });

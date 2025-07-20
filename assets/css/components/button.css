@@ -75,3 +75,11 @@
         background: var(--secondaryColor);
     }
 }
+
+.button--quinary {
+    padding: 15px 32px;
+    color: var(--primaryColor); 
+    border: solid 1px var(--primaryColor);
+    font-size: var(--xsFontsize);
+    border-radius: 4px;
+}

@@ -1,0 +1,121 @@
+/* ---------------- Form ---------------- */
+
+.form__box {
+    display: flex;
+    border-radius: 0 4px 4px 0;
+    overflow: hidden;
+    box-shadow: 0px 619px 173px 0px rgba(0, 0, 0, 0.00), 0px 396px 158px 0px rgba(0, 0, 0, 0.01), 0px 223px 134px 0px rgba(0, 0, 0, 0.05), 0px 99px 99px 0px rgba(0, 0, 0, 0.09), 0px 25px 54px 0px rgba(0, 0, 0, 0.10);
+
+    @media (max-width: 1199px) {
+        flex-direction: column;
+    }
+
+    >div {
+        width: 592px;
+        max-width: 100%;
+        padding: 32px;
+        
+        @media (max-width: 1199px) {
+            width: 100%;
+        }
+
+        >img {
+            margin: 0 auto 32px;
+            width: 129px;
+        }
+
+        >form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            input,
+            select:not([multiple]),
+            fieldset:has(select[multiple]),
+            textarea {
+                
+                border-radius: 4px;
+                border: 1px solid rgba(44, 44, 44, 0.15);
+                padding: 0 16px;
+                width: 100%;
+                outline: none;
+
+                &:not(:has(select[multiple])) {
+                    height: 56px;
+                }
+
+                &:has(select[multiple]) {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 16px;
+
+                    label {
+                        display: block;
+                        margin: 0 0 7px;
+                    }
+                }
+            }
+
+            select {
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+
+                &:not([multiple]) {
+                    background-image: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_1_3336" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="17"><rect x="16" y="0.5" width="16" height="16" transform="rotate(90 16 0.5)" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_1_3336)"><path d="M1.33335 5.84996L2.51669 4.66663L8.00002 10.15L13.4834 4.66663L14.6667 5.84996L8.00002 12.5166L1.33335 5.84996Z" fill="%23001EAF"/></g></svg>');
+                    background-repeat: no-repeat;
+                    background-position: calc(100% - 16px) center;
+                }
+
+                &[multiple] {
+                    option {
+                        appearance: none;
+                        padding: 7px 0 7px 24px;
+                        background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="15" height="15" rx="1.5" stroke="%232C2C2C"/></svg>');
+                        background-repeat: no-repeat;
+                        background-position: left center;
+
+                        &:checked {
+                            background: none;
+                            color: inherit;
+                            background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="15" height="15" rx="1.5" stroke="%232C2C2C"/><path d="M2.21449 7.83523L3.4304 6.80114L5.77699 9.57955L12.8963 3.48295L13.9304 4.69318L5.60085 11.8295L2.21449 7.83523Z" fill="%232C2C2C"/></svg>');
+                            background-repeat: no-repeat;
+                            background-position: left center;
+                        }
+                    }
+                }
+            }
+
+            label:has(input[type='checkbox']) {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                input {
+                    width: 16px;
+                    height: 16px;
+                    max-height: 16px;
+                    max-width: 16px;
+                }
+            }
+
+            fieldset:has(>button) {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+        }
+    }
+
+    >figure {
+        flex: 1;
+        @media (max-width: 1199px) {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
