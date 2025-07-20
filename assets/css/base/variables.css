@@ -2,16 +2,36 @@
 
 :root {
     --whiteColor: #FFF;
+    --whiteColorRGB: 255, 255, 255;
+
     --blackColor: #000;
+    --blackColorRGB: 0, 0, 0;
+
     --darkGrayColor: #2C2C2C;
+    --darkGrayColorRGB: 44, 44, 44;
+
     --grayColor: #6F7779;
+    --grayColorRGB: 111, 119, 121;
+
     --lightGrayColor: #F7F7F7;
+    --lightGrayColorRGB: 247, 247, 247;
+
     --primaryColor: #0D0D38;
+    --primaryColorRGB: 13, 13, 56;
+
     --secondaryColor: #2044DC;
+    --secondaryColorRGB: 32, 68, 220;
+
     --tertiaryColor: #001EAF;
+    --tertiaryColorRGB: 0, 30, 175;
+
     --successColor: #228E45;
+    --successColorRGB: 34, 142, 69;
+
     --errorColor: #8e2222;
+    --errorColorRGB: 142, 34, 34;
 }
+
 
 /* ---------------- Fonts ---------------- */
 

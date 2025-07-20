@@ -1,9 +1,13 @@
+/* ---------------- Base ---------------- */
+
 .button {
     display: block;
     width: max-content;
     transition: all .3s ease-in-out;
     line-height: 100%;
 }
+
+/* ---------------- Primary ---------------- */
 
 .button--primary {
     padding: 15px 22px;
@@ -15,10 +19,37 @@
     }
 }
 
+/* ---------------- Secondary ---------------- */
+
 .button--secondary {
     border-radius: 4px;
     padding: 18px 32px;
     background: var(--secondaryColor);
+    color: var(--whiteColor);
+    font-size: var(--smFontsize);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    text-transform: uppercase;
+
+    &::after {
+        content: url('data:image/svg+xml,<svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.52435 7.79165L7.12435 2.19165V7.20831H8.29102V0.208313H1.29102V1.37498H6.30768L0.707682 6.97498L1.52435 7.79165Z" fill="white"/></svg>');
+        transform: translateY(-3px);
+    }
+
+    &:hover {
+        background: var(--tertiaryColor);
+    }
+
+}
+
+/* ---------------- Tertiary ---------------- */
+
+.button--tertiary {
+    border-radius: 4px;
+    padding: 18px 32px;
+    background: var(--primaryColor);
     color: var(--whiteColor);
     font-size: var(--smFontsize);
     display: flex;
