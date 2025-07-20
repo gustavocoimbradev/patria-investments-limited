@@ -74,7 +74,7 @@
 /* ---------------- Quaternary ---------------- */
 
 .button--quaternary {
-    padding: 15px 22px;
+    padding: 15px 32px;
     color: var(--whiteColor); 
     background: var(--primaryColor);
     font-size: var(--xsFontsize);
