@@ -1,4 +1,4 @@
-/* ---------------- Base ---------------- */
+/* ---------------- Button ---------------- */
 
 .button {
     display: block;
@@ -6,8 +6,6 @@
     transition: all .3s ease-in-out;
     line-height: 100%;
 }
-
-/* ---------------- Primary ---------------- */
 
 .button--primary {
     padding: 15px 22px;
@@ -19,8 +17,6 @@
         background: var(--secondaryColor);
     }
 }
-
-/* ---------------- Secondary ---------------- */
 
 .button--secondary {
     border-radius: 4px;
@@ -45,8 +41,6 @@
 
 }
 
-/* ---------------- Tertiary ---------------- */
-
 .button--tertiary {
     border-radius: 4px;
     padding: 18px 32px;
@@ -69,8 +63,6 @@
     }
 
 }
-
-/* ---------------- Quaternary ---------------- */
 
 .button--quaternary {
     padding: 15px 32px;

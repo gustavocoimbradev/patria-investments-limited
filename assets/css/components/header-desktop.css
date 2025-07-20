@@ -1,4 +1,4 @@
-/* ---------------- Base ---------------- */
+/* ---------------- Header Desktop ---------------- */
 
 .header--desktop {
     padding: 26px 0;
@@ -42,8 +42,6 @@
 
 }
 
-/* ---------------- Brand ---------------- */
-
 .header--desktop__brand {
     display: flex;
     align-items: center;
@@ -81,8 +79,6 @@
         width: 148px;
     }
 }
-
-/* ---------------- Navigation ---------------- */
 
 .header--desktop__navigation {
     margin-left: auto;
@@ -163,8 +159,6 @@
     }
 }
 
-/* ---------------- Right ---------------- */
-
 .header--desktop__right {
     display: flex;
     align-items: center;
@@ -191,8 +185,6 @@
         }
     }
 }
-
-/* ---------------- Search ---------------- */
 
 .header--desktop__search {
     position: fixed;

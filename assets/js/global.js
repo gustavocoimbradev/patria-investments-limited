@@ -94,29 +94,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextButton = document.querySelector('.js-banner-bar-next');
         const items = bannerBar.querySelectorAll('li');
         let currentIndex = 0;
-    
+
         const scrollToIndex = (index) => {
             items[index]?.scrollIntoView({
                 behavior: 'smooth',
                 inline: 'center',
-                block: 'nearest' 
+                block: 'nearest'
             });
         };
-    
+
         prevButton.addEventListener('click', () => {
             if (currentIndex > 0) currentIndex--;
             scrollToIndex(currentIndex);
         });
-    
+
         nextButton.addEventListener('click', () => {
             if (currentIndex < items.length - 1) currentIndex++;
             scrollToIndex(currentIndex);
         });
     })();
-    
-    
+
+
     /* ---------------- Highcharts ---------------- */
-    
+
     (function highcharts() {
 
         function parseDate(str) {
@@ -192,5 +192,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })();
 
+    /* ---------------- Faqs ---------------- */
+
+    (function faqs() {
+        document.querySelectorAll('.js-faq').forEach(faq => {
+            const title = faq.querySelector('.js-faq-title');
+            const content = faq.querySelector('.js-faq-content');
+            title.addEventListener('click', () => {
+                const active = faq.classList.contains('is-active');
+                content.style.height = active ? '' : content.scrollHeight + 'px';
+                faq.classList.toggle('is-active');
+            });
+        });
+    })();
 
 });

@@ -12,6 +12,7 @@ html {
 	-moz-tab-size: 4;
 	tab-size: 4;
 	font-family: "TG Haido Grotesk Variable", sans-serif;
+	color: var(--darkGrayColor);
 	&.overflow-hidden {
 		&, body {
 			overflow: hidden;
@@ -42,6 +43,7 @@ h5,
 h6 {
 	font-size: inherit;
 	font-weight: inherit;
+	color: var(--primaryColor);
 }
 
 a {

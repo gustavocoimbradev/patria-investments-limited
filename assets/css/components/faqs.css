@@ -1,0 +1,62 @@
+/* ---------------- Faqs ---------------- */
+
+.faqs__text {
+    margin: 0 0 52px;
+
+    >*:last-child {
+        margin: 0;
+    }
+}
+
+.faqs__items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faqs__items__item {
+    &.is-active {
+        .faqs__items__item__title {
+            &::after {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+
+        .faqs__items__item__content {}
+    }
+}
+
+.faqs__items__item__title {
+    cursor: pointer;
+    height: 56px;
+    padding: 16px 55px 16px 16px;
+    display: -webkit-box;
+    background: var(--secondaryColor);
+    color: var(--whiteColor);
+    border-radius: 8px 8px 0 0;
+    user-select: none;
+    position: relative;
+
+    span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+    }
+
+    &::after {
+        content: url('data:image/svg+xml,<svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.3633 8L6.49705 2L1.00018 8" stroke="%23F9F9F9" stroke-width="1.5" transform="scale(1 -1) translate(0 -9)"/></svg>');
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s ease;
+    }
+}
+
+.faqs__items__item__content {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}

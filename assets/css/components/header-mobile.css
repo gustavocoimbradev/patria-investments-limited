@@ -1,4 +1,4 @@
-/* ---------------- Base ---------------- */
+/* ---------------- Header Mobile ---------------- */
 
 .header--mobile {
     padding: 26px 0;
@@ -39,8 +39,6 @@
     
 }
 
-/* ---------------- Brand ---------------- */
-
 .header--mobile__brand {
     display: flex;
     align-items: center;
@@ -79,8 +77,6 @@
     }
 }
 
-/* ---------------- Toggle ---------------- */
-
 .header--mobile__toggle {
     display: flex;
     align-items: center;
@@ -107,8 +103,6 @@
         }
     }
 }
-
-/* ---------------- Navigation ---------------- */
 
 .header--mobile__navigation {
     position: fixed;
@@ -148,8 +142,6 @@
         }
     }
 }
-
-/* ---------------- Search ---------------- */
 
 .header--mobile__search {
     display: flex;
@@ -200,8 +192,6 @@
     }
 
 }
-
-/* ---------------- Menu ---------------- */
 
 .header--mobile__menu {
     width: 100%;

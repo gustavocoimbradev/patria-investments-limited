@@ -6,15 +6,16 @@
 @import url("base/animations.css");
 @import url("base/typograph.css");
 
-/* Components */
+/* Global Components */
 
 @import url("components/container.css");
 @import url("components/button.css");
-@import url("components/bar.css");
+@import url("components/files.css");
+@import url("components/faqs.css");
+@import url("components/banner.css");
+@import url("components/header-desktop.css");
+@import url("components/header-mobile.css");
+@import url("components/footer.css");
 
-/* Template */
 
-@import url("template/header-desktop.css");
-@import url("template/header-mobile.css");
-@import url("template/footer.css");
 

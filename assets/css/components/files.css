@@ -1,0 +1,79 @@
+.files {
+    width: 100%;
+    table-layout: auto;
+
+    >tbody {
+        >tr {
+            >td {
+                height: 81px;
+                border-bottom: 1px solid rgba(44, 44, 44, 0.10);
+
+                &.date {
+                    padding: 24px 8px 24px 24px;
+
+                    @media (max-width: 1199px) {
+                        display: none;
+                    }
+                }
+
+                &.icon {
+                    padding: 24px 8px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        max-width: 32px;
+                        min-width: 32px;
+                        min-width: 32px;
+                        min-width: 32px;
+                    }
+                }
+
+                &.title {
+                    padding: 24px 8px;
+                    width: 100%;
+
+                    @media (max-width: 1199px) {
+                        font-size: var(--xsFontsize);
+                    }
+
+                    time {
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 231;
+                        line-height: 24px;
+                        display: block;
+                        margin: 0;
+                        @media (min-width: 1200px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.download {
+                    padding: 24px 24px 24px 8px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        max-width: 24px;
+                        min-width: 24px;
+                        min-width: 24px;
+                        min-width: 24px;
+                    }
+                }
+
+                &:first-of-type {
+                    padding-left: 24px;
+                }
+
+                &:last-of-type {
+                    padding-right: 24px;
+                }
+
+            }
+        }
+    }
+}
