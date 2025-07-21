@@ -234,7 +234,7 @@
                     }
 
                     &:nth-of-type(2) {
-                        top: 50%;
+                        top: calc(50% - 6px);
                         transform: translateY(-50%);
                     }
 
