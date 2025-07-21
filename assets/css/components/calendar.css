@@ -1,5 +1,9 @@
 /* ---------------- Calendar ---------------- */
 
+.calendar {
+    margin: 80px 0;
+}
+
 .calendar__text {
     margin: 0 0 64px;
 
@@ -16,11 +20,14 @@
         align-items: start;
         gap: 20px;
         font-family: sans-serif;
+
         @media (max-width: 768px) {
             margin-top: 80px;
+
             >button {
                 position: absolute;
                 top: -42px;
+
                 &#next {
                     right: 0;
                 }
@@ -139,6 +146,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2px;
+
                 li {
                     font-size: var(--xxsFontsize);
                     line-height: 100%;
@@ -174,4 +182,61 @@
         background: #88AAFF;
     }
 
+}
+
+.calendar__legend {
+    margin: 50px 0 0;
+    h1 {
+        margin: 0 0 28px;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 91px;
+        align-items: center;
+
+        @media (max-width: 1199px) {
+            gap: 12px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .color {
+                width: 25px;
+                height: 25px;
+            }
+
+            .color--1 {
+                background: #001EAF;
+            }
+
+            .color--2 {
+                background: #2C2C2C;
+            }
+
+            .color--3 {
+                background: #F8485E;
+            }
+
+            .color--4 {
+                background: #FF6B06;
+            }
+
+            .color--5 {
+                background: #88AAFF;
+            }
+
+            .label {
+                font-size: var(--xsFontsize);
+                font-style: normal;
+                font-weight: 231;
+                line-height: 24px;
+            }
+
+        }
+    }
 }

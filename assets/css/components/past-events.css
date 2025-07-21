@@ -1,0 +1,121 @@
+/* ---------------- Past Events ---------------- */
+
+.past-events {
+    margin: 80px 0;
+}
+
+.past-events__header {
+    margin: 0 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h1 {
+        margin: 0;
+    }
+}
+
+.past-events__content {
+    @media (max-width: 1199px) {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        table-layout: auto;
+
+        @media (max-width: 1199px) {
+            min-width: 1216px;
+        }
+
+        >thead {
+            >tr {
+                >th {
+                    padding: 16px 10px;
+                    color: var(--whiteColor);
+                    background: var(--secondaryColor);
+                    font-size: var(--xsFontsize);
+                    font-style: normal;
+                    font-weight: 231;
+                    line-height: 24px;
+                    text-align: left;
+                    border-bottom: 1px solid var(--tertiaryColor);
+
+                    &:first-of-type {
+                        border-top-left-radius: 8px;
+                        padding-left: 25px;
+                    }
+
+                    &:last-of-type {
+                        border-top-right-radius: 8px;
+                        padding-right: 25px;
+                    }
+
+                    &:not(:first-of-type) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        >tbody {
+            >tr {
+                >td {
+                    text-align: left;
+                    padding: 20px 10px;
+                    font-size: var(--xsFontsize);
+                    font-style: normal;
+                    font-weight: 231;
+                    line-height: 24px;
+                    border-bottom: 1px solid #C8BEB4;
+
+                    &.title {
+                        span {
+                            display: block;
+                            font-size: var(--xsFontsize);
+                            font-style: normal;
+                            font-weight: 344;
+                            line-height: 100%;
+                            margin: 0 0 5px;
+                        }
+
+                        time {
+                            display: block;
+                            font-size: var(--xsFontsize);
+                            font-style: normal;
+                            font-weight: 231;
+                            line-height: 100%;
+                        }
+                    }
+
+                    &:first-of-type {
+                        padding-left: 25px;
+                    }
+
+                    &:last-of-type {
+                        padding-right: 25px;
+                    }
+
+                    &:not(:first-of-type) {
+                        text-align: center;
+
+                        a {
+                            display: flex;
+                            justify-content: center;
+
+                            &:not(.has-file) {
+                                filter: grayscale(100%);
+                                opacity: .6;
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

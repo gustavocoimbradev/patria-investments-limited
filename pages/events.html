@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -223,14 +223,14 @@
             </nav>
         </section>
 
-        <!------------------ Form ------------------>
+        <!------------------ Calendar ------------------>
 
         <section class="calendar" data-animation="fade-up">
             <div class="container">
-                <header class="calendar__text">
+                <header class="calendar__text" data-animation="fade-up">
                     <h1>Events</h1>
                 </header>
-                <main class="calendar__content">
+                <main class="calendar__content" data-animation="fade-up">
                     <div class="calendar-nav">
                         <button id="prev">
                             <svg width="34" height="35" viewBox="0 0 34 35" fill="none"
@@ -251,9 +251,83 @@
                         </button>
                     </div>
                 </main>
-                <footer class="calendar__legend">
-
+                <footer class="calendar__legend" data-animation="fade-up">
+                    <h1>Legend</h1>
+                    <ul>
+                        <li>
+                            <div class="color color--1"></div>
+                            <div class="label">Results</div>
+                        </li>
+                        <li>
+                            <div class="color color--2"></div>
+                            <div class="label">Webcast</div>
+                        </li>
+                        <li>
+                            <div class="color color--3"></div>
+                            <div class="label">Another Event</div>
+                        </li>
+                        <li>
+                            <div class="color color--4"></div>
+                            <div class="label">Conferences</div>
+                        </li>
+                        <li>
+                            <div class="color color--5"></div>
+                            <div class="label">More Events</div>
+                        </li>
+                    </ul>
                 </footer>
+            </div>
+        </section>
+
+        <!------------------ Upcoming Events ------------------>
+
+        <section class="upcoming-events" data-animation="fade-up">
+            <div class="container">
+                <header class="upcoming-events__text">
+                    <h1>Upcoming Events</h1>
+                </header>
+                <main class="upcoming-events__content">
+                    <table class="table-upcoming-events js-upcoming-events">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Evento</th>
+                                <th>Hora</th>
+                                <th>Local/OBS</th>
+                                <th>Exportar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </main>
+            </div>
+        </section>
+
+        <!------------------ Past Events ------------------>
+
+        <section class="past-events" data-animation="fade-up">
+            <div class="container">
+                <header class="past-events__header">
+                    <h1>Past Events</h1>
+                    <select name="year" class="select-year js-filter-past-events">
+                    </select>
+                </header>
+                <main class="past-events__content">
+                    <table class="table-past-events js-past-events">
+                        <thead>
+                            <tr>
+                                <th>Past Events</th>
+                                <th>Click for webcast</th>
+                                <th>Presentation</th>
+                                <th>Call transcript</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </main>
             </div>
         </section>
 
