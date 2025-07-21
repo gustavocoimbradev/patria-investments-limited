@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>Patria Investiments Limited (PAX)</title>
     <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/pages/home.css">
+    <link rel="stylesheet" href="../assets/css/pages/events.css">
     <meta name="robots" content="noindex, nofollow">
 </head>
 
@@ -163,8 +163,30 @@
 
         <section class="banner" data-animation="fade-in">
             <figure data-animation="zoom-out">
-                <img src="../assets/img/banner-1.png" alt="Banner" width="1440" height="447">
+                <img src="../assets/img/banner-2.png" alt="Banner" width="1440" height="447">
             </figure>
+            <main data-animation="fade-up">
+                <div class="container">
+                    <h1>Events</h1>
+                    <ul>
+                        <li>
+                            <a href="/pages/home.html" target="_self">Home</a>
+                        </li>
+                        <li>
+                            <span class="separator">/</span>
+                        </li>
+                        <li>
+                            <a href="#" target="_self">News & Events</a>
+                        </li>
+                        <li>
+                            <span class="separator">/</span>
+                        </li>
+                        <li>
+                            <span class="current">Events</span>
+                        </li>
+                    </ul>
+                </div>
+            </main>
             <nav class="js-banner-bar" data-animation="fade-in">
                 <div class="container">
                     <button class="js-banner-bar-prev">
@@ -201,168 +223,37 @@
             </nav>
         </section>
 
-        <!------------------ Stock Chart Simplified ------------------>
+        <!------------------ Form ------------------>
 
-        <section class="stock-chart-simplified">
+        <section class="calendar" data-animation="fade-up">
             <div class="container">
-                <aside class="stock-chart-simplified__text" data-animation="fade-right">
-                    <h1>Patria Investments</h1>
-                    <p>Patria is a global alternative asset manager and industry leader in Latin America. Founded over
-                        35 years ago, Patria has total assets under management of $44.7 billion, and offices in 13
-                        cities on 4 continents. Patria aims to generate attractive long-term investment returns and,
-                        through a diversified platform with strategies that include Private Equity, Infrastructure,
-                        Credit, Real Estate, Public Equities and Global Private Markets Solutions, serve as the gateway
-                        to alternative investments for both local investors in Latin America, as well as global
-                        investors.</p>
-                </aside>
-                <div class="stock-chart-simplified__chart" data-animation="fade-left">
-                    <header>
-                        <div>
-                            <p class="title">Stock Information</p>
-                            <small class="delay">Minimum 15 minutes delayed. Source:</small>
-                            <figure class="image">
-                                <img src="../assets/img/lseg.png" alt="LSEG" width="97.6" height="46">
-                            </figure>
-                        </div>
-                        <div>
-                            <small class="ticker">NASDAQ GS: PAX</small>
-                            <div class="price">
-                                <h2 class="value">$ 11,85</h2>
-                                <p class="variation up">0(000%)</p>
-                            </div>
-                        </div>
-                    </header>
-                    <main>
-                        <div class="currency">
-                            <span>USD</span>
-                        </div>
-                        <div id="stockchart"></div>
-                    </main>
-                </div>
-            </div>
-        </section>
-
-        <!------------------ Press Releases ------------------>
-
-        <section class="press-releases" data-animation="fade-up">
-            <div class="container">
-                <header class="press-releases__title">
-                    <h1>Press Releases</h1>
+                <header class="calendar__text">
+                    <h1>Events</h1>
                 </header>
-                <main class="press-releases__items">
-                    <article class="press-releases__items__item" data-animation="fade-up">
-                        <time>Nov 05, 2024</time>
-                        <strong>Patria Reports Third Quarter 2024 Earnings Results</strong>
-                        <p>GRAND CAYMAN, Cayman Islands, Nov. 05, 2024 (GLOBE NEWSWIRE) -- Patria (Nasdaq:PAX) reported
-                            today its unaudited results for the third quarter ended September 30, 2024. The full
-                            detailed presentation of Patria's third quarter 2024 results can be accessed on the
-                            Shareholders section of Patria’s ...</p>
-                    </article>
-                    <article class="press-releases__items__item" data-animation="fade-up">
-                        <time>Oct 10, 2024</time>
-                        <strong>Patria Announces Third Quarter 2024 Investor Call</strong>
-                        <p>GRAND CAYMAN, Cayman Islands, Oct. 10, 2024 (GLOBE NEWSWIRE) -- Patria (Nasdaq:PAX) announced
-                            today that it will release financial results for the third quarter 2024 on Tuesday, November
-                            5, 2024, and host a conference call via public webcast at 9:00 a.m. ET. ...</p>
-                    </article>
-                    <article class="press-releases__items__item" data-animation="fade-up">
-                        <time>Aug 01, 2024</time>
-                        <strong>Patria Reports Second Quarter 2024 Earnings Results</strong>
-                        <p>GRAND CAYMAN, Cayman Islands, Aug. 01, 2024 (GLOBE NEWSWIRE) -- Patria (Nasdaq:PAX) reported
-                            today its unaudited results for the second quarter ended June 30, 2024. The full detailed
-                            presentation of Patria's second quarter 2024 results can be accessed on the Shareholders
-                            section of Patria’s ...</p>
-                    </article>
+                <main class="calendar__content">
+                    <div class="calendar-nav">
+                        <button id="prev">
+                            <svg width="34" height="35" viewBox="0 0 34 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.41504 17.4853L20.328 32.7461L25.6717 28.2245L16.5847 17.4853L25.6717 6.74608L20.328 2.22449L7.41504 17.4853Z"
+                                    fill="#0D0D38" />
+                            </svg>
+                        </button>
+                        <div id="calendar"></div>
+                        <button id="next">
+                            <svg width="34" height="35" viewBox="0 0 34 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.585 17.4853L14.672 2.2245L9.32827 6.74609L18.4153 17.4853L9.32828 28.2245L14.672 32.7461L27.585 17.4853Z"
+                                    fill="#0D0D38" />
+                            </svg>
+                        </button>
+                    </div>
                 </main>
-                <footer class="press-releases__button" data-animation="fade-up">
-                    <a href="#" target="_self" class="button button--secondary">View All</a>
+                <footer class="calendar__legend">
+
                 </footer>
-            </div>
-        </section>
-
-        <!------------------ Latest Financials ------------------>
-
-        <section class="latest-financials" data-animation="fade-up">
-            <div class="container">
-                <div>
-                    <aside class="latest-financials__text">
-                        <h1>Shareholders Relations</h1>
-                        <p>
-                            Patria Investments Ltd<br />
-                            18 Forum Lane, 3rd Floor<br />
-                            Camana Bay, PO Box 757, KY1-9006<br />
-                            Grand Cayman, Cayman Islands<br />
-                            International: + 1 (345) 640 4900<br />
-                            PatriaShareholderRelations@patria.com
-                        </p>
-                    </aside>
-                    <main class="latest-financials__files">
-                        <h1>Latest Financials</h1>
-                        <table class="table-files">
-                            <tbody>
-                                <tr>
-                                    <td class="date">11/13/2024</td>
-                                    <td class="icon"><img src="../assets/img/pdf.svg" alt="PDF" width="32" height="32">
-                                    </td>
-                                    <td class="title">SC 13G/A</td>
-                                    <td class="download">
-                                        <a href="/pages/home.html" target="_self" download>
-                                            <img src="../assets/img/download.svg" alt="Download" width="24" height="24">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="date">11/12/2024</td>
-                                    <td class="icon"><img src="../assets/img/pdf.svg" alt="PDF" width="32" height="32">
-                                    </td>
-                                    <td class="title">SC 13G/A</td>
-                                    <td class="download">
-                                        <a href="#" target="_self" download>
-                                            <img src="../assets/img/download.svg" alt="Download" width="24" height="24">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="date">11/08/2024</td>
-                                    <td class="icon"><img src="../assets/img/pdf.svg" alt="PDF" width="32" height="32">
-                                    </td>
-                                    <td class="title">SC 13G/A</td>
-                                    <td class="download">
-                                        <a href="#" target="_self" download>
-                                            <img src="../assets/img/download.svg" alt="Download" width="24" height="24">
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a href="#" target="_self" class="button button--tertiary">View All</a>
-                    </main>
-                </div>
-            </div>
-        </section>
-
-        <!------------------ E-mail Alerts ------------------>
-
-        <section class="email-alerts" data-animation="fade-up">
-            <div class="container">
-                <div>
-                    <figure data-animation="zoom-out">
-                        <img src="../assets/img/banner-1.png" alt="" width="1215" height="372">
-                    </figure>
-                    <form action="./email-alerts.html" method="GET">
-                        <h1>
-                            <mark>Receive alerts</mark><br />
-                            from Patria´s<br />E-mail.
-                        </h1>
-                        <div>
-                            <fieldset>
-                                <label for="email">E-mail</label>
-                                <input required type="email" name="email" placeholder="E-mail">
-                            </fieldset>
-                            <button class="button button--quaternary">Send</button>
-                        </div>
-                    </form>
-                </div>
             </div>
         </section>
 
@@ -446,11 +337,11 @@
     </footer>
 
     <!------------------ Scripts ------------------>
-    
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+
+    <script src=" https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js "></script>
 
     <script src="../assets/js/global.js"></script>
-    <script src="../assets/js/pages/home.js"></script>
+    <script src="../assets/js/pages/events.js"></script>
 
 </body>
 
