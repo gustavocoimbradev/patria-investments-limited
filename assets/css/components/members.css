@@ -2,6 +2,7 @@
 
 .members {
 
+    margin: 80px 0;
 
     @media (max-width: 1199px) {
         overflow-x: auto;
@@ -14,11 +15,133 @@
         @media (max-width: 1199px) {
             min-width: 1216px;
         }
-    
-        >tbody {
+
+        >thead {
             >tr {
-                >td {}
+                >th {
+                    color: var(--whiteColor);
+                    font-size: var(--smFontsize);
+                    font-style: normal;
+                    font-weight: 231;
+                    line-height: 100%;
+                    padding: 16px 32px;
+                    background: var(--secondaryColor);
+                    white-space: nowrap;
+
+                    &:first-of-type {
+                        border-top-left-radius: 8px;
+                        padding-left: 24px;
+                        width: 100%;
+                    }
+
+                    &:last-of-type {
+                        border-top-right-radius: 8px;
+                        padding-right: 24px;
+                    }
+                }
             }
         }
+
+        >tbody {
+            >tr {
+                >td {
+                    font-size: var(--smFontsize);
+                    font-style: normal;
+                    font-weight: 231;
+                    line-height: 100%;
+                    padding: 16px 32px;
+                    border-bottom: solid 1px rgba(0, 0, 0, 0.10);
+                    text-align: center;
+
+                    &::after {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    &:first-of-type {
+                        padding-left: 24px;
+                        width: 100%;
+                        text-align: left;
+
+                        &::after {
+                            width: 16px;
+                            height: 16px;
+                            left: 6px;
+                            top: -4px;
+                            position: relative;
+                        }
+                    }
+
+                    &:last-of-type {
+                        padding-right: 24px;
+                    }
+
+                    &.icon-1 {
+                        &::after {
+                            content: url('../../img/members-icon-1.svg');
+                        }
+                    }
+
+                    &.icon-2 {
+                        &::after {
+                            content: url('../../img/members-icon-2.svg');
+                        }
+                    }
+
+                    &.icon-3 {
+                        &::after {
+                            content: url('../../img/members-icon-3.svg');
+                        }
+                    }
+
+                    &.icon-4 {
+                        &::after {
+                            content: url('../../img/members-icon-4.svg');
+                        }
+                    }
+
+                    &.icon-5 {
+                        &::after {
+                            content: url('../../img/members-icon-5.svg');
+                        }
+                    }
+
+                }
+            }
+        }
+
+        >tfoot {
+            >tr {
+                >th {
+                    padding-top: 24px;
+                    >div {
+                        border-radius: 4px;
+                        border: 1px solid rgba(0, 0, 0, 0.10);
+                        padding: 10px;
+
+                        >div {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            >div {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                padding: 10px;
+                                flex: 1;
+                                justify-content: center;
+                                border: 1px solid rgba(0, 0, 0, 0.10);
+                                font-size: var(--smFontsize);
+                                font-style: normal;
+                                font-weight: 231;
+                                line-height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
