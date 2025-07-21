@@ -1,0 +1,24 @@
+/* ---------------- Members ---------------- */
+
+.members {
+
+
+    @media (max-width: 1199px) {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        table-layout: auto;
+
+        @media (max-width: 1199px) {
+            min-width: 1216px;
+        }
+    
+        >tbody {
+            >tr {
+                >td {}
+            }
+        }
+    }
+}
