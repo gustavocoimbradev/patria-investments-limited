@@ -5,14 +5,19 @@
     width: max-content;
     transition: all .3s ease-in-out;
     line-height: 100%;
+
+    &[disabled] {
+        pointer-events: none;
+        opacity: .3;
+    }
 }
 
 .button--primary {
     padding: 15px 22px;
-    color: var(--whiteColor); 
+    color: var(--whiteColor);
     background: var(--primaryColor);
     font-size: var(--xsFontsize);
-    
+
     &:hover {
         background: var(--secondaryColor);
     }
@@ -66,11 +71,11 @@
 
 .button--quaternary {
     padding: 15px 32px;
-    color: var(--whiteColor); 
+    color: var(--whiteColor);
     background: var(--primaryColor);
     font-size: var(--xsFontsize);
     border-radius: 4px;
-    
+
     &:hover {
         background: var(--secondaryColor);
     }
@@ -78,8 +83,34 @@
 
 .button--quinary {
     padding: 15px 32px;
-    color: var(--primaryColor); 
+    color: var(--primaryColor);
     border: solid 1px var(--primaryColor);
     font-size: var(--xsFontsize);
     border-radius: 4px;
+}
+
+.button--senary {
+    color: #333;
+    text-align: center;
+    font-size: var(--xsFontsize);
+    font-style: normal;
+    font-weight: 344;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 25px;
+    border-radius: 4px;
+    background: #EBEBEB;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background: #dbdbdb;
+    }
+    &.is-active {
+        color: var(--whiteColor);
+        &, &:hover {
+            background: var(--secondaryColor);
+        }
+    }
 }

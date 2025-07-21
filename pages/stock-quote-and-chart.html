@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>Patria Investiments Limited (PAX)</title>
     <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/pages/email-alerts.css">
+    <link rel="stylesheet" href="../assets/css/pages/stock-quote-and-chart.css">
     <meta name="robots" content="noindex, nofollow">
 </head>
 
@@ -167,7 +167,7 @@
             </figure>
             <main data-animation="fade-up">
                 <div class="container">
-                    <h1>E-mail Alerts</h1>
+                    <h1>Stock Quote & Chart</h1>
                     <ul>
                         <li>
                             <a href="/pages/home.html" target="_self">Home</a>
@@ -176,73 +176,153 @@
                             <span class="separator">/</span>
                         </li>
                         <li>
-                            <a href="#" target="_self">RI</a>
+                            <a href="#" target="_self">Share Information</a>
                         </li>
                         <li>
                             <span class="separator">/</span>
                         </li>
                         <li>
-                            <span class="current">E-mail Alerts</span>
+                            <span class="current">Stock Quote & Chart</span>
                         </li>
                     </ul>
                 </div>
             </main>
+            <nav class="js-banner-bar" data-animation="fade-in">
+                <div class="container">
+                    <button class="js-banner-bar-prev">
+                        <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4484 1.00006L2 9.26006L10.4484 17" stroke="white" stroke-width="2.41382" />
+                        </svg>
+                    </button>
+                    <ul data-animation="fade-up">
+                        <li>
+                            <a href="/pages/the-firm.html" target="_self">The Firm</a>
+                        </li>
+                        <li>
+                            <a href="/pages/our-business.html" target="_self">Our Business</a>
+                        </li>
+                        <li>
+                            <a href="/pages/shareholder.html" target="_self">Shareholders</a>
+                        </li>
+                        <li>
+                            <a href="/pages/careers.html" target="_self">Careers</a>
+                        </li>
+                        <li>
+                            <a href="/pages/media.html" target="_self">Media</a>
+                        </li>
+                        <li>
+                            <a href="/pages/contact.html" target="_self">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="js-banner-bar-next">
+                        <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.55164 17L10 8.74L1.55164 1.00006" stroke="white" stroke-width="2.41382" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
         </section>
 
         <!------------------ Form ------------------>
 
-        <section class="form" data-animation="fade-up">
+        <section class="stock-chart" data-animation="fade-up">
             <div class="container">
-                <main class="form__box">
-                    <div>
-                        <img src="../assets/img/logo-dark.svg" alt="Patria Logo" width="129" height="25">
-                        <form action="/" method="POST">
-                            <fieldset>
-                                <input type="text" name="name" placeholder="Name">
-                            </fieldset>
-                            <fieldset>
-                                <input type="email" name="email" placeholder="E-mail">
-                            </fieldset>
-                            <fieldset>
-                                <input type="text" name="business" placeholder="Business">
-                            </fieldset>
-                            <fieldset>
-                                <select name="profile">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <label for="group">Grupo:</label>
-                                <select name="group" multiple>
-                                    <option value="1">Quote</option>
-                                    <option value="2">SEC Filing</option>
-                                    <option value="3">Event</option>
-                                    <option value="4">News</option>
-                                    <option value="4">Presentations</option>
-                                </select>
-                            </fieldset>
-                            <fieldset>
-                                <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
-                            </fieldset>
-                            <fieldset>
-                                <label>
-                                    <input type="checkbox" name="terms" value="accepted">
-                                    <span>Li e aceito a <a href="#" target="_blank">Política de privacidade</a>.</span>
-                                  </label>
-                            </fieldset>
-                            <fieldset>
-                                <button type="submit" class="button button--quaternary" disabled>Enviar</button>
-                                <button type="reset" class="button button--quinary">Limpar formulário</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <figure data-animation="zoom-out">
-                        <img src="../assets/img/image.png" alt="Image" width="624" height="892">
-                    </figure>
-                </main>
+                <header class="stock-chart__text">
+                    <h1>Stock Quote & Chart</h1>
+                </header>
+                <div class="responsive">
+                    <main class="stock-chart__chart">
+                        <header>
+                            <div>
+                                <p class="title">NASDAQ GS: PAX</p>
+                                <small class="delay">Minimum 15 minutes delayed. Source:</small>
+                                <figure class="image">
+                                    <img src="../assets/img/lseg.png" alt="LSEG" width="97.6" height="46">
+                                </figure>
+                            </div>
+                            <div>
+                                <div>
+                                    <h2 class="price">$ 17,91</h2>
+                                    <span class="variation up">(+5,73%)</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <span class="label">High:</span>
+                                        <span class="value high">$ 18,04</span>
+                                    </div>
+                                    <div>
+                                        <span class="label">Low:</span>
+                                        <span class="value low">$ 18,04</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <span class="label">Open:</span>
+                                        <span class="value">$ 18,04</span>
+                                    </div>
+                                    <div>
+                                        <span class="label">Volume:</span>
+                                        <span class="value">160.887.596</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <span class="label">High52:</span>
+                                        <span class="value">$ 18,04</span>
+                                    </div>
+                                    <div>
+                                        <span class="label">Low52:</span>
+                                        <span class="value">$ 16,60</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <span class="label">Previous Close:</span>
+                                        <span class="value">9.149.600</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div id="stockchart"></div>
+                        </main>
+                        <footer>
+                            <div>
+                                <button data-type="line" data-chart="stockchart" class="button--senary is-active js-chart-change-type ">Line</button>
+                                <button data-type="area" data-chart="stockchart" class="button--senary js-chart-change-type">Area</button>
+                                <button data-type="column" data-chart="stockchart" class="button--senary js-chart-change-type">Column</button>
+                            </div>
+                            <div>
+                                <button data-range="1" data-chart="stockchart" class="button--senary is-active js-chart-change-range">1 Month</button>
+                                <button data-range="6" data-chart="stockchart" class="button--senary js-chart-change-range">6 Months</button>
+                                <button data-range="12" data-chart="stockchart" class="button--senary js-chart-change-range">1 Year</button>
+                                <button data-range="36" data-chart="stockchart" class="button--senary js-chart-change-range">3 Years</button>
+                                <button data-range="60" data-chart="stockchart" class="button--senary js-chart-change-range">5 Years</button>
+                            </div>
+                        </footer>
+                        <aside>
+                            <div class="legend">
+                                <div>
+                                    <div class="color up"></div>
+                                    <span class="label">Volume Up</span>
+                                </div>
+                                <div>
+                                    <div class="color down"></div>
+                                    <span class="label">Volume Down</span>
+                                </div>
+                            </div>
+                            <div class="bars" id="stockchart-movement">
+                            </div>
+                            <div class="filter">
+                                <button data-range="1" data-chart="stockchart-movement" class="button--senary is-active js-chart-change-range">1 Month</button>
+                                <button data-range="6" data-chart="stockchart-movement" class="button--senary js-chart-change-range">6 Months</button>
+                                <button data-range="12" data-chart="stockchart-movement" class="button--senary js-chart-change-range">1 Year</button>
+                                <button data-range="36" data-chart="stockchart-movement" class="button--senary js-chart-change-range">3 Years</button>
+                                <button data-range="60" data-chart="stockchart-movement" class="button--senary js-chart-change-range">5 Years</button>
+                            </div>
+                        </aside>
+                    </main>
+                </div>
             </div>
         </section>
 
@@ -327,10 +407,10 @@
 
     <!------------------ Scripts ------------------>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
 
     <script src="../assets/js/global.js"></script>
-    <script src="../assets/js/pages/email-alerts.js"></script>
+    <script src="../assets/js/pages/stock-quote-and-chart.js"></script>
 
 </body>
 

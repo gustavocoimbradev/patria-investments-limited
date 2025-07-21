@@ -1,6 +1,6 @@
-/* ---------------- Stock ---------------- */
+/* ---------------- Stock Chart Simplified ---------------- */
 
-.stock {
+.stock-chart-simplified {
     margin: 80px 0 60px;
 
     >.container {
@@ -14,11 +14,11 @@
     }
 }
 
-.stock__text {
+.stock-chart-simplified__text {
     flex: 1;
 }
 
-.stock__chart {
+.stock-chart-simplified__chart {
     width: 695px;
     max-width: 100%;
 
@@ -93,8 +93,7 @@
         }
 
 
-
-    }
+    }           
 
     >main {
         margin-top: 21px;
@@ -117,5 +116,5 @@
                 top: 1px;
             }
         }
-    }
+    }                                                       
 }

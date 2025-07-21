@@ -94,25 +94,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextButton = document.querySelector('.js-banner-bar-next');
         const items = bannerBar?.querySelectorAll('li') || [];
         let currentIndex = 0;
-      
+
         const scrollToIndex = index => {
-          items[index]?.scrollIntoView({
-            behavior: 'smooth',
-            inline: 'center',
-            block: 'nearest'
-          });
+            items[index]?.scrollIntoView({
+                behavior: 'smooth',
+                inline: 'center',
+                block: 'nearest'
+            });
         };
-      
+
         prevButton?.addEventListener('click', () => {
-          if (currentIndex > 0) currentIndex--;
-          scrollToIndex(currentIndex);
+            if (currentIndex > 0) currentIndex--;
+            scrollToIndex(currentIndex);
         });
-      
+
         nextButton?.addEventListener('click', () => {
-          if (currentIndex < items.length - 1) currentIndex++;
-          scrollToIndex(currentIndex);
+            if (currentIndex < items.length - 1) currentIndex++;
+            scrollToIndex(currentIndex);
         });
-      })();
+    })();
 
 
     /* ---------------- Highcharts ---------------- */
@@ -208,17 +208,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ---------------- Select Multiple ---------------- */
 
-    window.onmousedown = function(e) {
-        var el = e.target;
-        if (el.tagName.toLowerCase() == 'option' && el.parentNode.hasAttribute('multiple')) {
-            e.preventDefault();
-            if (el.hasAttribute('selected'))
-                el.removeAttribute('selected');
-            else
-                el.setAttribute('selected', '');
-            var select = el.parentNode.cloneNode(true);
-            el.parentNode.parentNode.replaceChild(select, el.parentNode);
+    (function select_multiple() {
+        window.onmousedown = function (e) {
+            var el = e.target;
+            if (el.tagName.toLowerCase() == 'option' && el.parentNode.hasAttribute('multiple')) {
+                e.preventDefault();
+                if (el.hasAttribute('selected'))
+                    el.removeAttribute('selected');
+                else
+                    el.setAttribute('selected', '');
+                var select = el.parentNode.cloneNode(true);
+                el.parentNode.parentNode.replaceChild(select, el.parentNode);
+            }
         }
-    }
+    })();
 
+    /* ---------------- Submit button ---------------- */
+
+    (function submit_button() {
+        document.querySelectorAll('form').forEach(f => {
+            const c = f.querySelector('input[name="terms"]'),
+                b = f.querySelector('button[type="submit"]');
+            c && b && (b.disabled = !c.checked, c.addEventListener('change', () => b.disabled = !c.checked));
+        });
+    })();
+
+    /* ---------------- Autofill email ---------------- */
+
+    (function autofill_email() {
+        const u = new URL(location), e = u.searchParams.get('email');
+        if (e) {
+            document.querySelectorAll('[name="email"]').forEach(i => i.value = e);
+            u.searchParams.delete('email');
+            history.replaceState(null, '', u);
+        }
+    })();
+    
 });
