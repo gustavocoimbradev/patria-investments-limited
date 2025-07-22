@@ -1,13 +1,13 @@
 /* ---------------- Select Year ---------------- */
 
-.select-year {
+.custom-select {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     background-image: url('data:image/svg+xml,<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.985229L7.84393 7.98523L14.257 0.985227" stroke="%23001EAF" stroke-width="2"/></svg>');
     background-position: calc(100% - 24px) center;
     background-repeat: no-repeat;
-    width: 112px;
+    min-width: 112px;
     height: 48px;
     border-radius: 4px;
     border: solid 1px var(--tertiaryColor);
